@@ -9,5 +9,6 @@ services:
       - .:/app:cached
     ports:
       - 3000:3000
+      - 8788:8788
     tty: false
     stdin_open: true
