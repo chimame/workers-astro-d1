@@ -4,11 +4,10 @@ services:
     build:
       context: .
     entrypoint: /app/scripts/docker-entrypoint.sh
-    command: pnpm run dev --host 0.0.0.0
+    command: pnpm run preview
     volumes:
       - .:/app:cached
     ports:
-      - 3000:3000
-      - 8788:8788
+      - 3000:8788
     tty: false
     stdin_open: true

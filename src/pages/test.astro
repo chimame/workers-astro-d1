@@ -1,5 +1,9 @@
 ---
+import { client } from "../database/client"
+import { getRuntime } from "@astrojs/cloudflare/runtime"
 
+const db = getRuntime<{ DB: any }>(Astro.request).env.DB
+const users = await client(db).selectFrom("User").selectAll().execute()
 ---
 
-<div>testtest</div>
+<div>testtest {users.length}</div>
