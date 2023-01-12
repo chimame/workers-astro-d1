@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "wrangler pages dev ./dist",
-    "astro": "astro"
+    "astro": "astro",
+    "migration": "zx ./scripts/migration.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^5.0.0",
@@ -16,10 +17,17 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^1.9.1",
+    "better-sqlite3": "^8.0.1",
+    "kysely": "^0.23.3",
+    "kysely-d1": "^0.0.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "wrangler": "^2.7.1"
+    "@prisma/client": "^4.8.1",
+    "kysely-codegen": "^0.9.0",
+    "prisma": "^4.8.1",
+    "wrangler": "^2.7.1",
+    "zx": "^7.1.1"
   }
 }

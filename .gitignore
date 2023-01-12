@@ -20,3 +20,8 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 .pnpm-store
+
+prisma/*.db
+prisma/*.db-journal
+migrations/*
+.wrangler/state/d1/DB.sqlite3
